@@ -517,6 +517,7 @@ begin
     case FFieldType of
       ftDate,
       ftTime,
+      ftTimeStamp,
       ftDateTime : DT := Self.AsDateTime;
       ftString, ftWideString:
 { 06/2011, AB fix for a bug discovered by Yeimi Osorio (issue 3305212)
@@ -700,6 +701,7 @@ begin
         ftDate     : Self.AsDateTime := DT;
         ftTime     : Self.AsDateTime := DT;
         ftDateTime : Self.AsDateTime := DT;
+        ftTimeStamp: Self.AsDAteTime := DT;
         ftString, ftWideString:
           Self.SetValue(sNewValue);
         else
